@@ -1,10 +1,26 @@
+let boton = document.getElementById('btnEnviar');
+
+boton.addEventListener('click', capturaDatos)
+
+let form = document.getElementById('form');
+
+form.addEventListener('submit', formSubmit)
+
+function formSubmit(e) {
+    e.preventDefault();
+}
+
+let muestra = document.getElementById('mostrar');
+
+function capturaDatos() {
 //declaro variable de entrada
-let num = Number(prompt("escriba un numero menor que cuatro mil"));
+let num = document.querySelector('#numero').value;
 //declaro variables y opero con ellas para que me separen cada numero
 let miles = Math.trunc(num/1000)%10;
 let centena = Math.trunc(num/100)%10;
 let decena = Math.trunc(num/10)%10;
-let unidad = Math.trunc(num/1)%10;4650
+let unidad = Math.trunc(num/1)%10;
+
 
 if(miles > 3){//si miles es mayor a 3 osea, si es 4mil
     alert("el numero no se puede representar"); 
@@ -121,8 +137,9 @@ if(miles > 3){//si miles es mayor a 3 osea, si es 4mil
         case 9:
             unidad = "IX";
             break;
+        }
     }
-
-    alert(`${miles}${centena}${decena}${unidad}`);
-
+    
+    muestra.innerHTML = `${miles}${centena}${decena}${unidad}`;
+    
 }
