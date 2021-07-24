@@ -1,23 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor a numeros romanost</title>
+    <title>Conversor a numeros romanos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <img src="./images/1.png" class="rounded mx-auto d-block" alt="...">
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <strong>Numeracion Romana</strong>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    La <strong>numeracion romana</strong> es un sistema de numeración que se desarrolló en la Antigua
+                    Roma y se utilizó en todo el Imperio romano, manteniéndose con posterioridad a su desaparición y
+                    todavía utilizado en algunos ámbitos. Este sistema emplea algunas letras mayúsculas como símbolos
+                    para representar ciertos valores. Los números se escriben como combinaciones de letras. El año
+                    actual, por ejemplo, 2021, se escribe numéricamente como MMXXI en donde cada M representa mil
+                    unidades, cada X representa diez unidades y, finalmente, I una unidad más.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <strong>Origenes</strong>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Los números romanos se escriben con letras del alfabeto romano, pero originalmente provenían de los
+                    etruscos, los cuales usaban I, Λ, X, Ψ, 8 y ⊕ para representar I, V, X, L, C, y M, respectivamente.
+                    Los romanos tomaron letras parecidas a los símbolos etruscos para representar los valores. Así para
+                    I y X utilizaron las letras I y X; para Λ lo invirtieron y utilizaron la V; el símbolo Ψ no era
+                    uniforme en el etrusco y evolucionó en diversas variantes: Ψ → ᗐ → ⊥; de la última, los romanos
+                    tomaron la mitad del símbolo que se convirtió en L al ser la letra más parecida. Para 8 y ⊕
+                    utilizaron las iniciales de los nombres en latín correspondientes a esos valores: C y M, al no haber
+                    letras similares a esos símbolos. El 500 inicialmente no tenía símbolo, pero el símbolo ⊕ del 1000
+                    también se representaba a veces con Φ y de la mitad de ese símbolo cogieron la D para representar la
+                    mitad de 1000.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <strong>Notacion moderna</strong>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Aunque en textos antiguos se usaban a veces letras minúsculas para representar los números romanos,
+                    en la actualidad los números romanos se escriben solo con forma mayúscula. La única excepción son
+                    los números romanos usados para numerar apartados o elementos de una lista, que se escriben
+                    frecuentemente con minúsculas y reciben el nombre de romanitos.
+                    <br>
+                    <br>
+                    Hay que tener en cuenta que la numeración romana, al no ser un sistema posicional, no requiere del
+                    cero. El valor cero (ninguno, nada), al no ser realmente un valor, no se representa en un sistema
+                    aditivo como el de la numeración romana (es más, hay personas que no requerían de uno por no ser una
+                    cantidad). Por este motivo, los romanos desconocían el cero, que fue introducido en Europa
+                    posteriormente con la numeración arábiga. Aunque el concepto de 0, sí fue conocido por los romanos,
+                    y por eso en la actualidad se utiliza N para referirse al 0 romano, ya que viene del latín nullus,
+                    nulo, y no del 0.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <form id="form">
         <h2>Conversor a numero romano</h2>
-        <label id="cantidad" class="cantidad">
-            Ingrese un numero menor a cuatro mil (4.000):
-        </label>
-        <input id="numero">
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="numero">
+            <label id="cantidad" class="cantidad" for="floatingInput">Ingrese un numero menor a 4.000</label>
+        </div>
     </form>
-    <button id="btnEnviar">Enviar</button>
-
-    <div id="mostrar"></div>
+    <br>
+    <button id="btnEnviar" type="button" class="btn btn-dark">Transformar</button>
+    <br>
+    <br>
+    <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Numero Romano</h5>
+          <p class="card-text" id="mostrar">Aqui</p>
+        </div>
+      </div>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
