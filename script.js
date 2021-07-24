@@ -22,8 +22,8 @@ let decena = Math.trunc(num/10)%10;
 let unidad = Math.trunc(num/1)%10;
 
 
-if(miles > 3){//si miles es mayor a 3 osea, si es 4mil
-    alert("el numero no se puede representar en esta pagina"); 
+if(miles > 3 || num==0){//si miles es mayor a 3 osea, si es 4mil o si el numero ingresado es igual a 0
+    alert("El numero no se puede representar"); 
     return;//importante el return si no se coloca, mostrara en la pagina el resultado a pesar de estar mal
 }else{//de lo contrario ejecute varios switch con sus opciones
     switch(miles){
@@ -141,7 +141,7 @@ if(miles > 3){//si miles es mayor a 3 osea, si es 4mil
         }
     }
     
-    muestra.innerHTML = `El numero ${num} se representa como ${miles}${centena}${decena}${unidad}`;
+    muestra.innerHTML = `<strong>El numero ${num} se representa como ${miles}${centena}${decena}${unidad}</strong>`;
     
     
 }

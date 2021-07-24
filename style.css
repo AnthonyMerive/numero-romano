@@ -1,0 +1,16 @@
+#form h2{
+    margin-top: 60px;
+    text-align: center;
+    color:rgb(76, 34, 231);
+}
+
+#mostrar{
+    text-align: center;
+    margin: 0 100px 20px 100px;
+    color: rgb(0, 153, 255);
+}
+
+#numero {
+    text-align: center;
+}
+

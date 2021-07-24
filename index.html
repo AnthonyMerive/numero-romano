@@ -14,7 +14,7 @@
 <body>
     <img src="./images/1.png" class="rounded mx-auto d-block" alt="...">
 
-    <div class="accordion" id="accordionExample">
+    <div class="accordion container" id="accordionExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -87,22 +87,17 @@
 
 
     <form id="form">
-        <h2>Conversor a numero romano</h2>
-        <div class="form-floating mb-3">
+        <h2 class="container">Conversor a numero romano</h2>
+        <div class="form-floating mb-3 container">
             <input type="number" class="form-control" id="numero">
-            <label id="cantidad" class="cantidad" for="floatingInput">Ingrese un numero menor a 4.000</label>
+            <label id="cantidad" class="cantidad" for="floatingInput"><strong>Ingrese un numero menor a 4.000</strong></label>
+            <button id="btnEnviar" type="button" class="btn btn-primary container-sm">Transformar</button>
         </div>
     </form>
-    <br>
-    <button id="btnEnviar" type="button" class="btn btn-dark">Transformar</button>
-    <br>
-    <br>
-    <div class="card text-center" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Numero Romano</h5>
-          <p class="card-text" id="mostrar">Aqui</p>
-        </div>
+  
+    <div id="mostrar"class="alert alert-secondary" role="alert">
       </div>
+
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
